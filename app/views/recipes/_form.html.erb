@@ -2,7 +2,7 @@
   <h3>Title: <%= f.text_field :title %></h3>
     <% f.fields_for :ingredients do |ingredient| %>
       <%= ingredient.text_field :name %>
-      <%= ingredient.text_field :quantity
+      <%= ingredient.text_field :quantity %>
     <% end %>
   <%=f.submit%>
 <% end %>
