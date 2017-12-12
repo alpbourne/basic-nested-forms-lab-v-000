@@ -17,4 +17,10 @@ class RecipesController < ApplicationController
     @recipe = Recipe.create(recipe_params)
     redirect_to @recipe
   end
+
+  private 
+
+  def recipe_params
+    params.require(:recipe).permit(:title, ingredients_attributes: [:id, :name, :quanity])
+  end
 end
